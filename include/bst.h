@@ -61,7 +61,7 @@ template <typename T>
       if (leftHeight > rightHeight)
         return leftHeight + 1;
       else
-        return rightHeight + 1
+        return rightHeight + 1;
     }
   };
 #endif  // INCLUDE_BST_H_
