@@ -54,14 +54,19 @@ template <typename T>
         return root->count;
     }
 
-    int depthTree(Node* root) {
-      if ((root == nullptr) || (root->left == nullptr && root->right == nullptr))
-        return 0;
-      int leftHeight = depthTree(root->left), rightHeight = depthTree(root->right);
-      if (leftHeight > rightHeight)
-        return leftHeight + 1;
-      else
-        return rightHeight + 1;
+    int depthTree(Node *root) {
+        int leftHeight = 0, rightHeight = 0;
+        if (root == nullptr) {
+            return 0;
+        } else {
+            leftHeight = depthTree(root->left);
+            rightHeight = depthTree(root->right);
+        }
+        if (rightHeight > leftHeight) {
+            return rightHeight + 1;
+        } else {
+            return leftHeight + 1;
+        }
     }
   };
 #endif  // INCLUDE_BST_H_
