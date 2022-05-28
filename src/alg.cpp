@@ -11,14 +11,14 @@ BST<std::string> makeTree(const char* filename) {
   std::ifstream file(filename);
   if (!file) {
     std::cout << "File error!" << std::endl;
-    return;
+    return Tree;
   }
   while (!file.eof()) {
     char ch = file.get();
     if ((ch >= 'A' && ch <= 'Z') || ( ch >= 'a' && ch <= 'z')) {
         word += ch;
     } else {
-       tolower(word);
+       tolower(std::string word);
        Tree.add(word);
        word = "";
     }
