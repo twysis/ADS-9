@@ -12,7 +12,7 @@ template <typename T>
       Node* left;
       int count;
     };
-  
+
     BST() :root(nullptr) {}
     ~BST() {}
     void add(T value) {
@@ -26,8 +26,8 @@ template <typename T>
     }
 
    private:
-   Node* root;
-    Node* addNode(Node* root, T value) {
+     Node* root;
+     Node* addNode(Node* root, T value) {
       if (root == nullptr) {
         root = new Node;
         root->value = value;
@@ -42,7 +42,7 @@ template <typename T>
       }
       return root;
     }
-  
+
     int searchNode(Node* root, T value) {
       if (root == nullptr)
         return 0;
@@ -53,7 +53,7 @@ template <typename T>
       else
         return root->count;
     }
-  
+
     int depthTree(Node* root) {
       if ((root == nullptr) || (root->left == nullptr && root->right == nullptr))
         return 0;
@@ -63,6 +63,5 @@ template <typename T>
       else
         return rightHeight + 1
     }
-};
-  
+  };
 #endif  // INCLUDE_BST_H_
