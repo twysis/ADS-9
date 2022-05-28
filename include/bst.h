@@ -22,7 +22,7 @@ template <typename T>
       return searchNode(root, value);
     }
     int depth() {
-      return depthTree(root - 1);
+      return depthTree(root) - 1;
     }
 
    private:
