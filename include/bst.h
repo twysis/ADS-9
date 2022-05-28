@@ -31,7 +31,7 @@ template <typename T>
       if (root == nullptr) {
         root = new Node;
         root->value = value;
-        root->count = 1;
+        root->count = 0;
         root->left = root->right = nullptr;
       } else if (root->value < value) {
         root->right = addNode(root->right, value);
