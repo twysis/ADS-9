@@ -22,7 +22,7 @@ template <typename T>
       return searchNode(root, value);
     }
     int depth() {
-      return depthTree(root);
+      return depthTree(root - 1);
     }
 
    private:
@@ -31,7 +31,7 @@ template <typename T>
       if (root == nullptr) {
         root = new Node;
         root->value = value;
-        root->count = 0;
+        root->count = 1;
         root->left = root->right = nullptr;
       } else if (root->value < value) {
         root->right = addNode(root->right, value);
